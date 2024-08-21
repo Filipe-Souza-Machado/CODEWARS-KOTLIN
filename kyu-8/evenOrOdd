@@ -1,0 +1,9 @@
+fun main() {
+	    
+    fun evenOrOdd(number: Int): String {
+  	  	return if (number % 2 == 0) "Even" else "Odd"; 
+	}
+    for (i in -2..4){
+        println(evenOrOdd(i));
+    }
+}
