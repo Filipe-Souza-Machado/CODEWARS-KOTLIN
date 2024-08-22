@@ -1,0 +1,22 @@
+fun calculatePetsYears(years: Int, mult: Int ):Int {
+    // Operador ternario.
+    return if (years == 1) 15 else if (years == 2) 24 else 24 + (years - 2) * mult;
+}
+
+fun calculateYears(years: Int): Array<Int> {
+    val allAges = arrayOf(0, 0, 0);
+    allAges[0] = years;
+    allAges[1] = calculatePetsYears(years, 4);
+    allAges[2] = calculatePetsYears(years, 5);
+    return allAges;
+}
+
+fun main() {
+
+    //.contentToString(): converte o conteúdo do array em uma string, separando os elementos com vírgulas.
+println(calculateYears(1).contentToString())
+println(calculateYears(2).contentToString())
+println(calculateYears(3).contentToString())
+println(calculateYears(4).contentToString())
+println(calculateYears(10).contentToString())
+}
